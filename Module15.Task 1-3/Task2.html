@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <style>
+            .btn {
+                width: 200px;
+                height: 50px;
+                font-size: 18px;
+                background-color: rgb(132, 232, 235);
+                border-radius: 8px;
+                border: none;
+                cursor: pointer;
+                margin-top: 50px;
+                margin-left: 50px;
+            }
+            .btn:hover {
+                box-shadow: 0px 2px 8px 2px rgba(141, 150, 178, 3);
+                transform: scale(1.05);
+            }
+        </style>
+        <button class="btn j-btn">Узнать размер экрана</button>
+        <script>
+            const btn = document.querySelector('.j-btn')
+            let screenWidth = window.screen.width;
+            let screenHeight = window.screen.height;
+
+            btn.addEventListener('click', () => {
+                alert(`Размер экрана: ${screenWidth} * ${screenHeight}`);
+                });
+        </script>
+    </body>
+</html>
